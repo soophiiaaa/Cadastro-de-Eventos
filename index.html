@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastrar Eventos</title>
+</head>
+<body>
+    <section class="message">
+        <div class="message-content">
+            <h1>Crie e compartilhe seu evento.</h1>
+            <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+        </div>
+    </section>
+    
+    <div class="form">
+        <form method="post">
+            <h2>Informações do Evento</h2>
+            <hr>
+
+            <div class="description">
+                <label for="title">Título do evento</label>
+                <p>(mínimo 8 caracteres)</p>
+            </div>
+            <input type="text" id="title" required>
+
+            <div class="description">
+                <label for="link">Link do evento</label>
+                <p>(comece com https://)</p>
+            </div>
+            <input type="url" id="link" required>
+
+            <div class="description">
+                <label for="number">Whatsapp para contato</label>
+                <p>(somente números)</p>
+            </div>
+            <input type="number" id="number" required>
+
+            <label for="info">Informações extras</label>
+            <textarea id="info" style="resize: none" rows="4" cols="50"></textarea>
+
+            <label for="category">Categoria</label>
+            <select id="category" required>
+                <option value="" disabled selected>Tipo do evento</option>
+                <option value="social">Social</option>
+                <option value="corporate">Corporativo</option>
+                <option value="religious">Religioso</option>
+                <option value="academic">Acadêmico</option>
+                <option value="cultural">Cultural</option>
+            </select>
+
+            <h2>Privacidade</h2>
+            <hr>
+
+            <div class="description">
+                <label for="email">E-mail do administrador</label>
+                <p>(digite um email válido)</p>
+            </div>
+            <input type="email" id="email" required>
+
+            <div class="description">
+                <label for="password">Senha de acesso para os participantes</label>
+                <p>(mínimo 8 caracteres)</p>
+            </div>
+            <input type="password" id="password" required>
+
+            <div class="private">
+                <input type="checkbox" id="private">
+                <label for="private">Evento privado</label>
+            </div>
+
+            <h2>Dia e hora</h2>
+            <hr>
+
+            <div class="datetime">
+                <div class="area"> 
+                    <label for="date">Data</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="area">
+                    <label for="start">Das</label>
+                    <input type="time" id="start" required>
+                </div>
+
+                <div class="area">
+                    <label for="end">Até</label>
+                    <input type="time" id="end" required>
+                </div>
+            </div>
+
+            <div class="button-area">
+                <button type="submit">Salvar evento</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
